@@ -1,0 +1,32 @@
+- create prompt method to communicate with user
+- start the big do loop
+  - welcome prompt
+  - prompt for loan amount
+- initialize loan amount variable outside of the following loop
+  - do loop amount = gets.chomp
+  - if amount is empty or amount is negative, prompt user to enter a legit amount
+    - if legit amount, break & end loop
+- prompt for interest rate
+  - include example prompt (don't include "%")
+- initialize interest rate outside of the following loop
+  - validate interest rate
+    - do loop
+      - if interest rate is empty or if user gives neg #, prompt user to enter legit interest rate
+      - if legit rate, break & end loop
+- prompt for loan duration in years
+  - initialize years variable outside of following loop
+    - validate years
+    - do loop
+        - if years is empty or if years is neg number, prompt to enter legit # of yrs
+        - if legit rate, break & end loop
+- perform calculations
+  - annual interest rate
+  - monthly interest rate
+  - months
+  - monthly payment = amount * (monthly interest rate / (1 - (1 + monthly interest rate)** - months))
+    - amount to float, months to integer,
+
+- show user their monthly payment
+- ask user if they want to perform another calculation
+- if they don't break big loop & end program
+- thank user for their business & tell em bye

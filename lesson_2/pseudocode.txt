@@ -1,0 +1,17 @@
+1. a method that return the sum of two integers
+  - GET integers from user
+  - SET integers in variable(s)
+  - Define method to sum numbers
+  - Print sum for user
+
+2. a method that takes an array of strings, and returns a string that is all those strings concatenated together.
+
+  - store array in variable
+  - define method to concatenate strings
+  - print concatenated string
+
+3. a method that takes an array of integers, and returns a new array with every other element
+  - store array in variable
+  - define method to get every other element
+  - store new array in variable
+  - print new array
