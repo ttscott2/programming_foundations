@@ -10,3 +10,6 @@ ages = { "Herman" => 32, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
 ages.delete_if { |k, v| v > 100  }
 # => OR
 ages.keep_if { |k, v| v < 100 }
+
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+flintstones.map { |name| name[0, 3]  }
