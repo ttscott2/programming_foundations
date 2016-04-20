@@ -4,34 +4,36 @@ def prompt(message)
   puts("=> #{message}")
 end
 
-choice = ''
+
 loop do
-  prompt("Choose one: #{VALID_CHOICES.join(', ')}")
-  choice = gets.chomp
-    if VALID_CHOICES.include?(choice)
-      break
-    else
-      prompt("That's not a valid choice.")
-    end
-end
+  choice = ''
+  loop do
+    prompt("Choose one: #{VALID_CHOICES.join(', ')}")
+    choice = gets.chomp
+      if VALID_CHOICES.include?(choice)
+        break
+      else
+        prompt("That's not a valid choice.")
+      end
+  end
 
-computer_choice = VALID_CHOICES.sample
+  computer_choice = VALID_CHOICES.sample
 
-puts "You chose: #{choice} and the computer chose: #{computer_choice}"
-if (choice == 'rock' && computer_choice == 'scissors') ||
-   (choice == 'paper' && computer_choice == 'rock') ||
-   (choice == 'scissors' && computer_choice == 'paper')
-  prompt("You won!")
-elsif (choice == 'rock' && computer_choice == 'paper') ||
-      (choice == 'paper' && computer_choice == 'scissors') ||
-      (choice == 'scissors' && computer_choice == 'rock')
-  prompt("Computer won!")
-    else
-  prompt("It's a tie!")
-end
+  puts "You chose: #{choice} and the computer chose: #{computer_choice}"
+  if (choice == 'rock' && computer_choice == 'scissors') ||
+     (choice == 'paper' && computer_choice == 'rock') ||
+     (choice == 'scissors' && computer_choice == 'paper')
+    prompt("You won!")
+  elsif (choice == 'rock' && computer_choice == 'paper') ||
+        (choice == 'paper' && computer_choice == 'scissors') ||
+        (choice == 'scissors' && computer_choice == 'rock')
+    prompt("Computer won!")
+      else
+    prompt("It's a tie!")
+  end
 
-prompt("Do you want to play again?")
-answer = gets.chomp
-break unless answer.downcase.start_with('y')
+  prompt("Do you want to play again?")
+  answer = gets.chomp
+  break unless answer.downcase.start_with?('y')
 end
 prompt("Thank you for playing. Good bye!")
