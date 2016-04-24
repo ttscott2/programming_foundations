@@ -1,0 +1,22 @@
+when discussing methods, be sure to mention 1) return value 2) side effects 3) outputs
+
+VARIABLE SCOPE
+  * blocks create a new scope for local variables; the scope created by a block is an inner scope
+  * nested blocks will create nested scopes.
+  * A variable's scope is determined by where it is initialized.
+    ** Variables initialized in an outer scope can be accessed in an inner scope, but not vice versa.
+    ** Outer scope variables accessed in an inner scope can be changed in the inner scope.
+   * Peer scopes do not conflict. Peer blocks can't reference variables initialized in other blocks.
+   * Nested blocks follow the same rules of inner/outer scoped variables.
+   * Variable shadowing- when 2 local variables (one inner scope, the other outer scope) share the same name. Result- it prevents access to the outer scope local variable
+
+    Variables & Methods
+    * method scopes are entirely self contained
+    * The only variables methods have access to must be passed in to the methods. Methods have no notion of "outer" or "inner" scope-- you must explicitly pass in any params to methods.
+
+    Blocks w/in Methods
+    * The rules of block scope ramain in full effect even if we're working inside a method.
+
+METHODS-MUTATING THE CALLER
+* In general/usually, methods can't modify arguments passed in to them permanently.
+* The exeception- when we perform some action on the argument that MUTATES THE CALLER, we can in fact permanently alter variables outside the method's scope.
